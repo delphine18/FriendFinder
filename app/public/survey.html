@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Friend Finder - Survey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <!-- Latest compiled and minified CSS & JS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://code.jquery.com/jquery.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    
+<div class='container'>
+  <div class='card-panel yellow darken-1 col s12 center-align'>
+      <h4><strong>Survey Questions</strong></h4>
+      <div class='card-panel left-align white'>
+        <h5><strong>About You</strong></h5>
+        <br>
+        <input id="name" type="text" class="validate" required>
+        <label class='active' for="name">Name (required)</label>
+        <input id="photo" type="text" class="validate" required>
+        <label class='active' for="name">Link to Photo Image (required)</label>
+        <h5><strong>Question 1</strong></h5>
+        <p>I am extroverted.</p>
+          <select data-placeholder="" class="browser-default" id="q1">
+              <option value="">Choose an option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+          </select>
+        <h5><strong>Question 2</strong></h5>
+        <p>I like to keep a schedule.</p>
+          <select data-placeholder="" class="browser-default" id="q2">
+              <option value="">Choose an option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+          </select>
+        <h5><strong>Question 3</strong></h5>
+        <p>I am self-disciplined.</p>
+          <select data-placeholder="" class="browser-default" id="q3">
+              <option value="">Choose an option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+          </select>
+        <h5><strong>Question 4</strong></h5>
+        <p>I like intellectual and logical conversations.</p>
+          <select data-placeholder="" class="browser-default" id="q4">
+              <option value="">Choose an option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+          </select>
+        <h5><strong>Question 5</strong></h5>
+        <p>I like to talk about feelings and emotions.</p>
+          <select data-placeholder="" class="browser-default" id="q5">
+              <option value="">Choose an option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+          </select>
+        <h5><strong>Question 6</strong></h5>
+        <p>I am quiet most of the times.</p>
+          <select data-placeholder="" class="browser-default" id="q6">
+              <option value="">Choose an Option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+          </select>
+        <h5><strong>Question 7</strong></h5>
+        <p>I keep a very clean house.</p>
+          <select data-placeholder="" class="browser-default" id="q7">
+              <option value="">Choose an option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+          </select>
+        <h5><strong>Question 8</strong></h5>
+        <p>I am disorganized.</p>
+          <select data-placeholder="" class="browser-default" id="q8">
+              <option value="">Choose an option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+          </select>
+        <h5><strong>Question 9</strong></h5>
+        <p>I am calm and emotionally stable.</p>
+          <select data-placeholder="" class="browser-default" id="q9">
+              <option value="">Choose an option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+          </select>
+        <h5><strong>Question 10</strong></h5>
+        <p>I love to travel to exotic places.</p>
+          <select data-placeholder="" class="browser-default" id="q10">
+              <option value="">Choose an option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+          </select>
+          <br>
+          <br>
+        <!-- Modal Trigger/Submit Button -->
+        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="modal1" id="submitBtn">Submit Answers</button>
+              
+      </div>
+    </div>
+
+  <div class='col s4'>
+    <p><a href='/api/friends'>API Friends List</a> | <a href='https://github.com/delphine18/FriendFinder' target='_blank'>GitHub Repo</a></p>
+  </div>
+
+  <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Meet Your Match!</h4>
+        <h5 id="matchName"></h5>
+        <img id="matchPic" src="" alt="No Image" width = 250px>
+      </div>
+      <div class="modal-footer">
+      <a href="#!"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></a>
+      </div>
+    </div>
+
+</div>
+<!-- Grabs data and sends it to the server -->
+<script type="text/javascript">
+  $(document).ready(function() {
+      $("#submitBtn").on("click", function() {
+          //form validation
+          function validateForm() {
+              var isValid = true;
+              $('.validate').each(function() {
+                  if ($(this).val() === ''){
+                      isValid = false;
+                  }
+              });
+  
+              $('.browser-default').each(function() {
+                  if ($(this).val() === ""){
+                      isValid = false;
+                  }
+              });
+  
+              return isValid;
+          }
+  
+          if (validateForm() == true) {
+    
+              var newFriend = {
+                  name: $('#name').val().trim(),
+                  profilePic: $('#photo').val().trim(),
+                  scores: [
+                      $('#q1').val(),
+                      $('#q2').val(),
+                      $('#q3').val(),
+                      $('#q4').val(),
+                      $('#q5').val(),
+                      $('#q6').val(),
+                      $('#q7').val(),
+                      $('#q8').val(),
+                      $('#q9').val(),
+                      $('#q10').val(),
+                  ]
+              };
+  
+              var currentURL = window.location.origin;
+  
+              //AJAX posts the data to friends API.
+              $.post(currentURL + "/api/friends", newFriend, function(data) {
+                  //Grab the data from the AJAX post and the best match's name and photo are displayed.
+                  $("#matchName").text(data.name);
+                  $("#matchPic").attr("src", data.profilePic);
+  
+              });
+              // Modal with the best match
+                  $('.modal').modal();
+  
+              //clear form fter submission
+              $('#name').val("");
+              $('#photo').val("");
+              $('#q1').val("");
+              $('#q2').val("");
+              $('#q3').val("");
+              $('#q4').val("");
+              $('#q5').val("");
+              $('#q6').val("");
+              $('#q7').val("");
+              $('#q8').val("");
+              $('#q9').val("");
+              $('#q10').val("");
+          } else {
+              alert("Please fill out ALL the fields before submitting!")
+          }
+      });
+  });
+  </script>
+
+
+</body>
+</html>
